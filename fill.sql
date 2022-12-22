@@ -76,30 +76,30 @@ INSERT INTO WEAPON (name, type_id) VALUES
 --NINJA
 INSERT INTO NINJA (id, name, clan_id, eye_id, rank_id, chakra_amount, criminal_num, criminal_group_id, is_criminal, village_id) VALUES (0,'',0,0,0,0,0,0,false,0);
 INSERT INTO NINJA (name, clan_id, eye_id, rank_id, chakra_amount, criminal_num, criminal_group_id, is_criminal, village_id) VALUES
-    ('Минато', 6, 1, 4, 800, 0, 0, false, 1),
-    ('Кушина', 1, 1, 3, 700, 0, 0, false, 1),
-    ('Наруто', 1, 1, 4, 1000, 0, 0, false, 1),
+    ('Минато', 6, 1, 4, 800, 0, null, false, 1),
+    ('Кушина', 1, 1, 3, 700, 0, null, false, 1),
+    ('Наруто', 1, 1, 4, 1000, 0, null, false, 1),
     ('Саске', 2, 2, 3, 950, 32, 1, true, 1),
     ('Итачи', 2, 2, 3, 900, 182, 1, true, 1),
-    ('Какаси', 3, 1, 4, 750, 0, 0, false, 1),
-    ('Неджи', 4, 3, 3, 680, 0, 0, false, 1),
-    ('Хиаши', 4, 3, 3, 700, 0, 0, false, 3),
+    ('Какаси', 3, 1, 4, 750, 0, null, false, 1),
+    ('Неджи', 4, 3, 3, 680, 0, null, false, 1),
+    ('Хиаши', 4, 3, 3, 700, 0, null, false, 3),
     ('Нагато', 1, 4, 3, 870, 68, 1, true, 4),
-    ('Гаара', 7, 1, 4, 890, 0, 0, false, 2),
+    ('Гаара', 7, 1, 4, 890, 0, null, false, 2),
     ('Обито', 2, 2, 3, 910, 59, 1, true, 1),
     ('Кисаме', 8, 1, 3, 800, 45, 3, true, 3),
     ('Забуза', 9, 1, 3, 600, 26, 3, true, 3),
     ('Чоуджуро', 0, 1, 3, 551, 13, 3, true, 3),
     ('Кушимару', 10, 1, 3, 546, 42, 3, true, 3),
-    ('Орочимару', 0, 1, 3, 900, 69, 0, true, 1),
+    ('Орочимару', 0, 1, 3, 900, 69, null, true, 1),
     ('Мей', 11, 1, 4, 764, 0, 0, false, 3),
-    ('Киллер', 12, 1, 3, 816, 0, 0, false, 4),
+    ('Киллер', 12, 1, 3, 816, 0, null, false, 4),
     ('Эй', 12, 1, 4, 821, 0, 0, false, 4),
-    ('Ооноки', 0, 1, 4, 879, 0, 0, false, 5),
+    ('Ооноки', 0, 1, 4, 879, 0, null, false, 5),
     ('Дейдара', 0, 1, 3, 764, 56, 1, true, 5),
     ('Сасори', 0, 1, 3, 648, 23, 1, true, 2),
-    ('Темари', 0, 1, 3, 567, 0, 0, false, 2),
-    ('Канкуро', 5, 1, 3, 789, 0, 0, false, 2);
+    ('Темари', 0, 1, 3, 567, 0, null, false, 2),
+    ('Канкуро', 5, 1, 3, 789, 0, null, false, 2);
 
 ALTER TABLE VILLAGE ADD KAGE INTEGER REFERENCES NINJA(ID);
 UPDATE  VILLAGE SET KAGE = 3 where village.id = 1;
