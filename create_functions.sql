@@ -10,7 +10,7 @@ $$
 create or replace function update_kage() returns trigger as
 $$
 declare
-     rank_of_ninja_id integer;
+    rank_of_ninja_id integer;
     rank_jounin integer;
     rank_kage integer;
 begin
