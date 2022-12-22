@@ -26,6 +26,23 @@ begin
 end;
 $village_change_kage$ language plpgsql;
 
+create or replace function proceed_crime(obj crime_to_ninja) returns trigger as
+$$
+declare
+    ninja_in_list integer;
+begin
+    update ninja
+    set is_criminal = true
+    where ninja_id = obj.ninja_id;
+
+    ninja_in_list = (select wanted_ninja_id from wanted_list where obj.ninja_id = wanted_ninja_id);
+    if (ninja_in_list is not NULL) then
+        insert into wanted_list(wanted_ninja_id, is_captured, executor_ninja_id, description, date_of_search_start, date_of_capture)
+        values (obj.ninja_id, false, NULL, '', current_timestamp(), )
+    end if;
+end;
+$$ language plpgsql;
+
 CREATE TRIGGER clan_enum
     before insert or update or delete on CLAN
 execute procedure do_not_change();
@@ -65,3 +82,7 @@ execute procedure do_not_change();
 create trigger village_change_kage
     before update on VILLAGE
     for each row execute procedure update_kage();
+
+create trigger crime_commited
+    before insert on crime_to_ninja
+    execute procedure proceed_crime(new);
