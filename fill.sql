@@ -115,6 +115,9 @@ INSERT INTO NINJA (name, clan_id, eye_id, rank_id, chakra_amount, criminal_num, 
 VALUES ('Сасори', 0, 1, 3, 648, 23, 0, 0, 1, true, 0, 2);
 INSERT INTO NINJA (name, clan_id, eye_id, rank_id, chakra_amount, criminal_num, father_id, mother_id, criminal_group_id, is_criminal, weapon_id, village_id)
 VALUES ('Темари', 0, 1, 3, 567, 0, 0, 0, 0, false, 9, 2);
+INSERT INTO NINJA (name, clan_id, eye_id, rank_id, chakra_amount, criminal_num, father_id, mother_id, criminal_group_id, is_criminal, weapon_id, village_id)
+VALUES ('Канкуро', 5, 1, 3, 789, 0, 0, 0, 0, false, 7, 2);
+
 
 INSERT INTO TECHNIQUE_TYPE (type) VALUES ('Ниндзюцу');
 INSERT INTO TECHNIQUE_TYPE (type) VALUES ('Гендзюцу');
@@ -151,7 +154,6 @@ INSERT INTO TECHNIQUE (name, type_id, clan_id, description, chakra_cost) VALUES 
 INSERT INTO TECHNIQUE (name, type_id, clan_id, description, chakra_cost) VALUES ('Построение Ино-Шика-Чоу',1,7,'',533);
 INSERT INTO TECHNIQUE (name, type_id, clan_id, description, chakra_cost) VALUES ('Скрученный Цветок',1,7,'',434);
 INSERT INTO TECHNIQUE (name, type_id, clan_id, description, chakra_cost) VALUES ('Марионетка: Удар Весеннего Наказания',1,10,'',664);
-
 INSERT INTO TECHNIQUE (name, type_id, clan_id, description, chakra_cost) VALUES ('Котоамацуками',2,4,'',410);
 INSERT INTO TECHNIQUE (name, type_id, clan_id, description, chakra_cost) VALUES ('Цукуёми',2,4,'',115);
 INSERT INTO TECHNIQUE (name, type_id, clan_id, description, chakra_cost) VALUES ('Бесконечное Цукуёми',2,5,'',135);
@@ -166,7 +168,6 @@ INSERT INTO TECHNIQUE (name, type_id, clan_id, description, chakra_cost) VALUES 
 INSERT INTO TECHNIQUE (name, type_id, clan_id, description, chakra_cost) VALUES ('Техника Пришествия Тьмы',2,12,'',735);
 INSERT INTO TECHNIQUE (name, type_id, clan_id, description, chakra_cost) VALUES ('Техника Отслеживания Чакры',2,2,'',518);
 INSERT INTO TECHNIQUE (name, type_id, clan_id, description, chakra_cost) VALUES ('Техника Обмана Разума',2,10,'',753);
-
 INSERT INTO TECHNIQUE (name, type_id, clan_id, description, chakra_cost) VALUES ('Марионетка: Танец Вишни в Цвету',3,5,'',22);
 INSERT INTO TECHNIQUE (name, type_id, clan_id, description, chakra_cost) VALUES ('Восемь Триграмм: Нарушение Вакуумной Ладони',3,6,'',596);
 INSERT INTO TECHNIQUE (name, type_id, clan_id, description, chakra_cost) VALUES ('Супер Великий Огромный Вихрь Листа',3,9,'',414);
@@ -187,7 +188,6 @@ INSERT INTO TECHNIQUE (name, type_id, clan_id, description, chakra_cost) VALUES 
 INSERT INTO TECHNIQUE (name, type_id, clan_id, description, chakra_cost) VALUES ('Защитные Восемь Триграмм Шестьдесят Четыре Ладони',3,12,'',273);
 INSERT INTO TECHNIQUE (name, type_id, clan_id, description, chakra_cost) VALUES ('Внутренняя Сакура',3,4,'',217);
 INSERT INTO TECHNIQUE (name, type_id, clan_id, description, chakra_cost) VALUES ('Кулаки Львов-Близнецов Мягкой Поступи',3,7,'',457);
-
 INSERT INTO TECHNIQUE (name, type_id, clan_id, description, chakra_cost) VALUES ('Вакуумная Атака Восьмидесяти Богов',4,5,'',419);
 INSERT INTO TECHNIQUE (name, type_id, clan_id, description, chakra_cost) VALUES ('Заряд! Отряд Конохамару',4,7,'',650);
 INSERT INTO TECHNIQUE (name, type_id, clan_id, description, chakra_cost) VALUES ('Стихия Земли: Техника Каменного Кулака',4,2,'',56);
@@ -208,6 +208,28 @@ INSERT INTO TECHNIQUE (name, type_id, clan_id, description, chakra_cost) VALUES 
 INSERT INTO TECHNIQUE (name, type_id, clan_id, description, chakra_cost) VALUES ('Комбо Наруто по Области',4,1,'',175);
 INSERT INTO TECHNIQUE (name, type_id, clan_id, description, chakra_cost) VALUES ('Алое Приглашение',4,2,'',260);
 INSERT INTO TECHNIQUE (name, type_id, clan_id, description, chakra_cost) VALUES ('Небесный Двойной Клык',4,8,'',557);
+INSERT INTO TECHNIQUE (name, type_id, clan_id, description, chakra_cost) VALUES ('Меч Кагуцучи: Ярость',3,0,'',232);
+INSERT INTO TECHNIQUE (name, type_id, clan_id, description, chakra_cost) VALUES ('Человеческий Снаряд Йо-Йо',2,0,'',241);
+INSERT INTO TECHNIQUE (name, type_id, clan_id, description, chakra_cost) VALUES ('Построение Скальной Лавины',4,0,'',299);
+INSERT INTO TECHNIQUE (name, type_id, clan_id, description, chakra_cost) VALUES ('Полет!',4,0,'',706);
+INSERT INTO TECHNIQUE (name, type_id, clan_id, description, chakra_cost) VALUES ('Шип',3,0,'',318);
+INSERT INTO TECHNIQUE (name, type_id, clan_id, description, chakra_cost) VALUES ('Стихия Взрыва: Минный Кулак',2,0,'',555);
+INSERT INTO TECHNIQUE (name, type_id, clan_id, description, chakra_cost) VALUES ('Тайдзюцу Листа: Вихрь Яростных Ударов Ног',3,0,'',204);
+INSERT INTO TECHNIQUE (name, type_id, clan_id, description, chakra_cost) VALUES ('Истинные Восемь Триграмм Шестьдесят Четыре Ладони',2,0,'',640);
+INSERT INTO TECHNIQUE (name, type_id, clan_id, description, chakra_cost) VALUES ('Всплеск Девятихвостого',2,0,'',503);
+INSERT INTO TECHNIQUE (name, type_id, clan_id, description, chakra_cost) VALUES ('Последняя Надежда: Атака Восьми Врат',3,0,'',553);
+INSERT INTO TECHNIQUE (name, type_id, clan_id, description, chakra_cost) VALUES ('Тигровая Лилия',3,0,'',238);
+INSERT INTO TECHNIQUE (name, type_id, clan_id, description, chakra_cost) VALUES ('Вихрь Листа',2,0,'',699);
+INSERT INTO TECHNIQUE (name, type_id, clan_id, description, chakra_cost) VALUES ('Сон Багрового Листа',3,0,'',77);
+INSERT INTO TECHNIQUE (name, type_id, clan_id, description, chakra_cost) VALUES ('Кагуцучи Расенган',3,0,'',204);
+INSERT INTO TECHNIQUE (name, type_id, clan_id, description, chakra_cost) VALUES ('Восемь Триграмм: Триста Шестьдесят Один Стиль',2,0,'',562);
+INSERT INTO TECHNIQUE (name, type_id, clan_id, description, chakra_cost) VALUES ('Танец Клематиса: Цветок',3,0,'',699);
+INSERT INTO TECHNIQUE (name, type_id, clan_id, description, chakra_cost) VALUES ('Пятитысячное Комбо Наруто Узумаки',3,0,'',694);
+INSERT INTO TECHNIQUE (name, type_id, clan_id, description, chakra_cost) VALUES ('Комбо Атака Наруто Узумаки',2,0,'',162);
+INSERT INTO TECHNIQUE (name, type_id, clan_id, description, chakra_cost) VALUES ('Цветочный Аромат',2,0,'',464);
+INSERT INTO TECHNIQUE (name, type_id, clan_id, description, chakra_cost) VALUES ('Искусство Ниндзя: Техника Прохождения Сквозь Стену',2,0,'',757);
+INSERT INTO TECHNIQUE (name, type_id, clan_id, description, chakra_cost) VALUES ('Сияющий Страусиный Пинок',2,0,'',269);
+INSERT INTO TECHNIQUE (name, type_id, clan_id, description, chakra_cost) VALUES ('Усиленная Чакрой Мощь',3,0,'',448);
 
 INSERT INTO TECHNIQUE_TO_NINJA (ninja_id, technique_id) VALUES (2,4);
 INSERT INTO TECHNIQUE_TO_NINJA (ninja_id, technique_id) VALUES (2,9);
@@ -259,3 +281,81 @@ INSERT INTO TECHNIQUE_TO_NINJA (ninja_id, technique_id) VALUES (8,19);
 INSERT INTO TECHNIQUE_TO_NINJA (ninja_id, technique_id) VALUES (8,22);
 INSERT INTO TECHNIQUE_TO_NINJA (ninja_id, technique_id) VALUES (8,31);
 
+INSERT INTO TECHNIQUE_TO_NINJA (ninja_id, technique_id) VALUES (24,3);
+INSERT INTO TECHNIQUE_TO_NINJA (ninja_id, technique_id) VALUES (24,13);
+INSERT INTO TECHNIQUE_TO_NINJA (ninja_id, technique_id) VALUES (24,16);
+INSERT INTO TECHNIQUE_TO_NINJA (ninja_id, technique_id) VALUES (24,24);
+INSERT INTO TECHNIQUE_TO_NINJA (ninja_id, technique_id) VALUES (24,33);
+INSERT INTO TECHNIQUE_TO_NINJA (ninja_id, technique_id) VALUES (24,34);
+
+INSERT INTO TECHNIQUE_TO_NINJA (ninja_id, technique_id) VALUES (1,2);
+INSERT INTO TECHNIQUE_TO_NINJA (ninja_id, technique_id) VALUES (1,6);
+INSERT INTO TECHNIQUE_TO_NINJA (ninja_id, technique_id) VALUES (1,7);
+INSERT INTO TECHNIQUE_TO_NINJA (ninja_id, technique_id) VALUES (1,40);
+
+INSERT INTO TECHNIQUE_TO_NINJA (ninja_id, technique_id) VALUES (10,28);
+INSERT INTO TECHNIQUE_TO_NINJA (ninja_id, technique_id) VALUES (10,29);
+INSERT INTO TECHNIQUE_TO_NINJA (ninja_id, technique_id) VALUES (10,51);
+
+INSERT INTO TECHNIQUE_TO_NINJA (ninja_id, technique_id) VALUES (12,14);
+INSERT INTO TECHNIQUE_TO_NINJA (ninja_id, technique_id) VALUES (12,25);
+INSERT INTO TECHNIQUE_TO_NINJA (ninja_id, technique_id) VALUES (12,36);
+INSERT INTO TECHNIQUE_TO_NINJA (ninja_id, technique_id) VALUES (12,37);
+
+INSERT INTO TECHNIQUE_TO_NINJA (ninja_id, technique_id) VALUES (13,47);
+INSERT INTO TECHNIQUE_TO_NINJA (ninja_id, technique_id) VALUES (13,70);
+INSERT INTO TECHNIQUE_TO_NINJA (ninja_id, technique_id) VALUES (13,71);
+
+INSERT INTO TECHNIQUE_TO_NINJA (ninja_id, technique_id) VALUES (15,30);
+INSERT INTO TECHNIQUE_TO_NINJA (ninja_id, technique_id) VALUES (15,44);
+INSERT INTO TECHNIQUE_TO_NINJA (ninja_id, technique_id) VALUES (15,57);
+INSERT INTO TECHNIQUE_TO_NINJA (ninja_id, technique_id) VALUES (15,76);
+INSERT INTO TECHNIQUE_TO_NINJA (ninja_id, technique_id) VALUES (15,81);
+
+INSERT INTO TECHNIQUE_TO_NINJA (ninja_id, technique_id) VALUES (17,15);
+INSERT INTO TECHNIQUE_TO_NINJA (ninja_id, technique_id) VALUES (17,26);
+INSERT INTO TECHNIQUE_TO_NINJA (ninja_id, technique_id) VALUES (17,35);
+INSERT INTO TECHNIQUE_TO_NINJA (ninja_id, technique_id) VALUES (17,50);
+
+INSERT INTO TECHNIQUE_TO_NINJA (ninja_id, technique_id) VALUES (18,41);
+INSERT INTO TECHNIQUE_TO_NINJA (ninja_id, technique_id) VALUES (18,42);
+INSERT INTO TECHNIQUE_TO_NINJA (ninja_id, technique_id) VALUES (18,54);
+INSERT INTO TECHNIQUE_TO_NINJA (ninja_id, technique_id) VALUES (18,58);
+INSERT INTO TECHNIQUE_TO_NINJA (ninja_id, technique_id) VALUES (18,60);
+INSERT INTO TECHNIQUE_TO_NINJA (ninja_id, technique_id) VALUES (18,62);
+INSERT INTO TECHNIQUE_TO_NINJA (ninja_id, technique_id) VALUES (18,80);
+INSERT INTO TECHNIQUE_TO_NINJA (ninja_id, technique_id) VALUES (19,41);
+INSERT INTO TECHNIQUE_TO_NINJA (ninja_id, technique_id) VALUES (19,42);
+INSERT INTO TECHNIQUE_TO_NINJA (ninja_id, technique_id) VALUES (19,54);
+INSERT INTO TECHNIQUE_TO_NINJA (ninja_id, technique_id) VALUES (19,58);
+
+INSERT INTO TECHNIQUE_TO_NINJA (ninja_id, technique_id) VALUES (14,85);
+INSERT INTO TECHNIQUE_TO_NINJA (ninja_id, technique_id) VALUES (14,86);
+INSERT INTO TECHNIQUE_TO_NINJA (ninja_id, technique_id) VALUES (14,87);
+INSERT INTO TECHNIQUE_TO_NINJA (ninja_id, technique_id) VALUES (14,88);
+INSERT INTO TECHNIQUE_TO_NINJA (ninja_id, technique_id) VALUES (14,89);
+INSERT INTO TECHNIQUE_TO_NINJA (ninja_id, technique_id) VALUES (14,90);
+INSERT INTO TECHNIQUE_TO_NINJA (ninja_id, technique_id) VALUES (14,91);
+INSERT INTO TECHNIQUE_TO_NINJA (ninja_id, technique_id) VALUES (16,85);
+INSERT INTO TECHNIQUE_TO_NINJA (ninja_id, technique_id) VALUES (16,86);
+INSERT INTO TECHNIQUE_TO_NINJA (ninja_id, technique_id) VALUES (16,87);
+INSERT INTO TECHNIQUE_TO_NINJA (ninja_id, technique_id) VALUES (16,88);
+INSERT INTO TECHNIQUE_TO_NINJA (ninja_id, technique_id) VALUES (16,89);
+INSERT INTO TECHNIQUE_TO_NINJA (ninja_id, technique_id) VALUES (16,90);
+INSERT INTO TECHNIQUE_TO_NINJA (ninja_id, technique_id) VALUES (20,85);
+INSERT INTO TECHNIQUE_TO_NINJA (ninja_id, technique_id) VALUES (20,86);
+INSERT INTO TECHNIQUE_TO_NINJA (ninja_id, technique_id) VALUES (20,87);
+INSERT INTO TECHNIQUE_TO_NINJA (ninja_id, technique_id) VALUES (20,88);
+INSERT INTO TECHNIQUE_TO_NINJA (ninja_id, technique_id) VALUES (21,85);
+INSERT INTO TECHNIQUE_TO_NINJA (ninja_id, technique_id) VALUES (21,86);
+INSERT INTO TECHNIQUE_TO_NINJA (ninja_id, technique_id) VALUES (21,87);
+INSERT INTO TECHNIQUE_TO_NINJA (ninja_id, technique_id) VALUES (21,88);
+INSERT INTO TECHNIQUE_TO_NINJA (ninja_id, technique_id) VALUES (21,89);
+INSERT INTO TECHNIQUE_TO_NINJA (ninja_id, technique_id) VALUES (22,85);
+INSERT INTO TECHNIQUE_TO_NINJA (ninja_id, technique_id) VALUES (22,86);
+INSERT INTO TECHNIQUE_TO_NINJA (ninja_id, technique_id) VALUES (22,87);
+INSERT INTO TECHNIQUE_TO_NINJA (ninja_id, technique_id) VALUES (22,88);
+INSERT INTO TECHNIQUE_TO_NINJA (ninja_id, technique_id) VALUES (23,85);
+INSERT INTO TECHNIQUE_TO_NINJA (ninja_id, technique_id) VALUES (23,86);
+INSERT INTO TECHNIQUE_TO_NINJA (ninja_id, technique_id) VALUES (23,87);
+INSERT INTO TECHNIQUE_TO_NINJA (ninja_id, technique_id) VALUES (23,88);
