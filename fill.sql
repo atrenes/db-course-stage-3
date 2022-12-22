@@ -359,3 +359,8 @@ INSERT INTO TECHNIQUE_TO_NINJA (ninja_id, technique_id) VALUES (23,85);
 INSERT INTO TECHNIQUE_TO_NINJA (ninja_id, technique_id) VALUES (23,86);
 INSERT INTO TECHNIQUE_TO_NINJA (ninja_id, technique_id) VALUES (23,87);
 INSERT INTO TECHNIQUE_TO_NINJA (ninja_id, technique_id) VALUES (23,88);
+
+INSERT INTO CRIME_RANK (type) VALUES ('местный');
+INSERT INTO CRIME_RANK (type) VALUES ('федеральный');
+INSERT INTO CRIME_RANK (type) VALUES ('межгосударственный');
+
