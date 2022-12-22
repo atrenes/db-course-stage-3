@@ -615,14 +615,14 @@ INSERT INTO WEAPON_TO_NINJA (ninja_id, weapon_id) VALUES
     (24,6),
     (24,3);
 INSERT INTO WANTED_LIST(wanted_ninja_id, is_captured, executor_ninja_id, description, date_of_search_start, date_of_capture) VALUES
-(4,false,null,'','1622-11-11',null),
-(5,false,null,'','1664-09-09',null),
-(9,false,null,'','1668-08-10',null),
-(11,false,null,'','1638-04-22',null),
-(12,false,null,'','1606-06-28',null),
-(13,false,null,'','1612-04-29',null),
-(14,false,null,'','1628-12-30',null),
-(15,false,null,'','1652-12-23',null),
-(16,false,null,'','1667-12-07',null),
-(21,false,null,'','1625-09-20',null),
-(22,false,null,'','1659-07-21',null);
+    (4,false,null,'','1622-11-11',null),
+    (5,false,null,'','1664-09-09',null),
+    (9,false,null,'','1668-08-10',null),
+    (11,false,null,'','1638-04-22',null),
+    (12,false,null,'','1606-06-28',null),
+    (13,false,null,'','1612-04-29',null),
+    (14,false,null,'','1628-12-30',null),
+    (15,false,null,'','1652-12-23',null),
+    (16,false,null,'','1667-12-07',null),
+    (21,false,null,'','1625-09-20',null),
+    (22,false,null,'','1659-07-21',null);
