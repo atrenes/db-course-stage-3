@@ -80,6 +80,7 @@ begin
             (rank_id >= crim_rank)
             and (is_criminal = false)
             and (chakra_amount >= crim_chakra - 100)
+        order by chakra_amount
         limit 1
     );
 end;
