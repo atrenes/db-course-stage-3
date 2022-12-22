@@ -62,6 +62,31 @@ begin
 end
 $$ language plpgsql;
 
+create or replace function search_executor(id_criminal integer) returns integer as $$
+declare
+    crim_rank integer;
+    crim_chakra integer;
+    is_crim boolean;
+begin
+    is_crim = (select is_criminal from ninja where id = id_criminal);
+    if (is_crim = false) then
+        raise notice 'Не надо его устранять, он не преступник!';
+        return NULL;
+    end if;
+
+    crim_rank = (select rank_id from ninja where id = id_criminal);
+    crim_chakra = (select chakra_amount from ninja where id = id_criminal);
+    return (select id from ninja
+        where
+            (rank_id >= crim_rank)
+            and (is_criminal = false)
+            and (chakra_amount >= crim_chakra - 100)
+        limit 1
+    );
+end;
+$$ language plpgsql;
+
+
 CREATE TRIGGER clan_enum
     before insert or update or delete on CLAN
 execute procedure do_not_change();
