@@ -1,4 +1,3 @@
-
 create or replace function do_not_change() returns trigger as
 $$
 begin
