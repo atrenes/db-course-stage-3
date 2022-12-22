@@ -26,7 +26,7 @@ begin
 end
 $village_change_kage$ language plpgsql;
 
-create or replace function proceed_crime(obj crime_to_ninja) returns trigger as
+create or replace function proceed_crime() returns trigger as
 $$
 declare
     ninja_in_list integer;
@@ -36,11 +36,11 @@ declare
 begin
     update ninja
     set is_criminal = true
-    where ninja_id = obj.ninja_id;
+    where id = new.ninja_id;
 
-    ninja_in_list = (select wanted_ninja_id from wanted_list where obj.ninja_id = wanted_ninja_id);
+    ninja_in_list = (select wanted_ninja_id from wanted_list where new.ninja_id = wanted_ninja_id);
     if (ninja_in_list is NULL) then
-        crime_rank = (select crime_rank_id from crime where crime.id = obj.crime_id);
+        crime_rank = (select crime_rank_id from crime where crime.id = new.crime_id);
         if (crime_rank = 1) then
             description = 'Мелкий преступник. Не приоритетная цель.';
         end if;
@@ -52,10 +52,10 @@ begin
         end if;
 
         insert into wanted_list(wanted_ninja_id, is_captured, executor_ninja_id, description, date_of_search_start, date_of_capture)
-        values (obj.ninja_id, false, NULL, description, current_date, NULL);
+        values (new.ninja_id, false, NULL, description, current_date, NULL);
     end if;
 
-    crim_group = (select criminal_group_id from ninja where obj.ninja_id = id);
+    crim_group = (select criminal_group_id from ninja where new.ninja_id = id);
     update criminal_group set crime_num = crime_num + 1 where id = crim_group;
 
     return new;
@@ -100,4 +100,4 @@ create trigger village_change_kage
 
 create trigger crime_commited
     before insert on crime_to_ninja
-    execute procedure proceed_crime(new);
+    for each row execute procedure proceed_crime();
