@@ -70,7 +70,6 @@ declare
 begin
     is_crim = (select is_criminal from ninja where id = id_criminal);
     if (is_crim = false) then
-        raise notice 'Не надо его устранять, он не преступник!';
         return NULL;
     end if;
 
