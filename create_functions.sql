@@ -9,21 +9,20 @@ $$
 
 create or replace function update_kage() returns trigger as
 $$
-declare
-    rank_of_ninja_id integer;
-    rank_jounin integer;
-    rank_kage integer;
 begin
-    rank_of_ninja_id = (select RANK_ID from NINJA where NINJA.ID = new.KAGE);
-    rank_jounin = (select ID from NINJA_RANK where NINJA_RANK.TYPE = 'Джоунин');
-    rank_kage = (select ID from NINJA_RANK where NINJA_RANK.TYPE = 'Кагэ');
-    if (rank_of_ninja_id = rank_jounin) then
-        update NINJA set RANK_ID = rank_kage where NINJA.ID = new.KAGE;
+    if ((select rank_id from ninja where ninja.id = new.kage) >= 3) then
+        update ninja
+        set rank_id = 4
+        where ninja.id = new.kage;
+
+        update ninja
+        set rank_id = 3
+        where ninja.id = old.kage;
+
+        return new;
+    else
+        raise exception 'Ninja rank too low!';
     end if;
-    if (rank_of_ninja_id <> rank_jounin) then
-        raise exception 'Ninja rank is too low to become kage!';
-    end if;
-    return new;
 end;
 $$
     language plpgsql;

@@ -35,14 +35,6 @@ INSERT INTO COUNTRY (name) VALUES ('Страна Воды');
 INSERT INTO COUNTRY (name) VALUES ('Страна Молнии');
 INSERT INTO COUNTRY (name) VALUES ('Страна Земли');
 
---VILLAGES
-INSERT INTO VILLAGE (id, name, country_id) VALUES (0,'', 0);
-INSERT INTO VILLAGE (name, country_id) VALUES ('Скрытый Лист', 1);
-INSERT INTO VILLAGE (name, country_id) VALUES ('Скрытый Песок', 2);
-INSERT INTO VILLAGE (name, country_id) VALUES ('Скрытый Туман', 3);
-INSERT INTO VILLAGE (name, country_id) VALUES ('Скрытое Облако', 4);
-INSERT INTO VILLAGE (name, country_id) VALUES ('Скрытый Камень', 5);
-
 --CRIMINAL_GROUP
 INSERT INTO CRIMINAL_GROUP(id, name, crime_num, description) VALUES (0, '', 0, '');
 INSERT INTO CRIMINAL_GROUP(name, crime_num, description) VALUES ('Акацуки', 872, 'самая опасная группировка');
@@ -118,6 +110,13 @@ VALUES ('Темари', 0, 1, 3, 567, 0, 0, 0, 0, false, 9, 2);
 INSERT INTO NINJA (name, clan_id, eye_id, rank_id, chakra_amount, criminal_num, father_id, mother_id, criminal_group_id, is_criminal, weapon_id, village_id)
 VALUES ('Канкуро', 5, 1, 3, 789, 0, 0, 0, 0, false, 7, 2);
 
+--VILLAGES
+INSERT INTO VILLAGE (id, name, country_id) VALUES (0,'', 0);
+INSERT INTO VILLAGE (name, country_id) VALUES ('Скрытый Лист', 1);
+INSERT INTO VILLAGE (name, country_id) VALUES ('Скрытый Песок', 2);
+INSERT INTO VILLAGE (name, country_id) VALUES ('Скрытый Туман', 3);
+INSERT INTO VILLAGE (name, country_id) VALUES ('Скрытое Облако', 4);
+INSERT INTO VILLAGE (name, country_id) VALUES ('Скрытый Камень', 5);
 
 INSERT INTO TECHNIQUE_TYPE (type) VALUES ('Ниндзюцу');
 INSERT INTO TECHNIQUE_TYPE (type) VALUES ('Гендзюцу');
