@@ -3,13 +3,14 @@ $$
 begin
     raise exception 'This table must not be redacted.';
 end;
-$$
-    language plpgsql;
+$$ language plpgsql;
 
 create or replace function update_kage() returns trigger as
-$$
+$village_change_kage$
+declare ninja_rank integer;
 begin
-    if ((select rank_id from ninja where ninja.id = new.kage) >= 3) then
+    ninja_rank = (select rank_id from ninja where ninja.id = new.kage);
+    if (ninja_rank = 3) then
         update ninja
         set rank_id = 4
         where ninja.id = new.kage;
@@ -20,48 +21,47 @@ begin
 
         return new;
     else
-        raise exception 'Ninja rank too low!';
+        raise exception 'Ninja rank is too low or ninja is already Kage!';
     end if;
 end;
-$$
-    language plpgsql;
+$village_change_kage$ language plpgsql;
 
-create or replace trigger clan_enum
+CREATE TRIGGER clan_enum
     before insert or update or delete on CLAN
 execute procedure do_not_change();
 
-create or replace trigger technique_enum
+create trigger technique_enum
     before insert or update or delete on TECHNIQUE
 execute procedure do_not_change();
 
-create or replace trigger eyes_enum
+create trigger eyes_enum
     before insert or update or delete on EYES
 execute procedure do_not_change();
 
-create or replace trigger crime_rank_enum
+create trigger crime_rank_enum
     before insert or update or delete on CRIME_RANK
 execute procedure do_not_change();
 
-create or replace trigger ninja_rank_enum
+create trigger ninja_rank_enum
     before insert or update or delete on NINJA_RANK
 execute procedure do_not_change();
 
-create or replace trigger weapon_type_enum
+create trigger weapon_type_enum
     before insert or update or delete on WEAPON_TYPE
 execute procedure do_not_change();
 
-create or replace trigger wanted_status_enum
+create trigger wanted_status_enum
     before insert or update or delete on WANTED_STATUS
 execute procedure do_not_change();
 
-create or replace trigger country_enum
+create trigger country_enum
     before insert or update or delete on COUNTRY
 execute procedure do_not_change();
 
-create or replace trigger village_enum
+create trigger village_enum
     before insert or delete on VILLAGE
 execute procedure do_not_change();
 
-create or replace trigger village_change_kage
+create trigger village_change_kage
     before update on VILLAGE
-execute procedure update_kage();
+    for each row execute procedure update_kage();
