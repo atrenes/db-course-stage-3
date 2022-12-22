@@ -70,7 +70,7 @@ declare
 begin
     is_crim = (select is_criminal from ninja where id = id_criminal);
     if (is_crim = false) then
-        return NULL;
+        raise exception 'This ninja is not a criminal!';
     end if;
 
     crim_rank = (select rank_id from ninja where id = id_criminal);
