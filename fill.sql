@@ -209,3 +209,53 @@ INSERT INTO TECHNIQUE (name, type_id, clan_id, description, chakra_cost) VALUES 
 INSERT INTO TECHNIQUE (name, type_id, clan_id, description, chakra_cost) VALUES ('Алое Приглашение',4,2,'',260);
 INSERT INTO TECHNIQUE (name, type_id, clan_id, description, chakra_cost) VALUES ('Небесный Двойной Клык',4,8,'',557);
 
+INSERT INTO TECHNIQUE_TO_NINJA (ninja_id, technique_id) VALUES (2,4);
+INSERT INTO TECHNIQUE_TO_NINJA (ninja_id, technique_id) VALUES (2,9);
+INSERT INTO TECHNIQUE_TO_NINJA (ninja_id, technique_id) VALUES (2,20);
+INSERT INTO TECHNIQUE_TO_NINJA (ninja_id, technique_id) VALUES (2,27);
+INSERT INTO TECHNIQUE_TO_NINJA (ninja_id, technique_id) VALUES (2,48);
+INSERT INTO TECHNIQUE_TO_NINJA (ninja_id, technique_id) VALUES (2,77);
+INSERT INTO TECHNIQUE_TO_NINJA (ninja_id, technique_id) VALUES (2,82);
+INSERT INTO TECHNIQUE_TO_NINJA (ninja_id, technique_id) VALUES (3,4);
+INSERT INTO TECHNIQUE_TO_NINJA (ninja_id, technique_id) VALUES (3,9);
+INSERT INTO TECHNIQUE_TO_NINJA (ninja_id, technique_id) VALUES (3,20);
+INSERT INTO TECHNIQUE_TO_NINJA (ninja_id, technique_id) VALUES (3,27);
+INSERT INTO TECHNIQUE_TO_NINJA (ninja_id, technique_id) VALUES (9,4);
+INSERT INTO TECHNIQUE_TO_NINJA (ninja_id, technique_id) VALUES (9,9);
+INSERT INTO TECHNIQUE_TO_NINJA (ninja_id, technique_id) VALUES (9,20);
+INSERT INTO TECHNIQUE_TO_NINJA (ninja_id, technique_id) VALUES (9,27);
+
+INSERT INTO TECHNIQUE_TO_NINJA (ninja_id, technique_id) VALUES (4,1);
+INSERT INTO TECHNIQUE_TO_NINJA (ninja_id, technique_id) VALUES (4,11);
+INSERT INTO TECHNIQUE_TO_NINJA (ninja_id, technique_id) VALUES (4,12);
+INSERT INTO TECHNIQUE_TO_NINJA (ninja_id, technique_id) VALUES (4,17);
+INSERT INTO TECHNIQUE_TO_NINJA (ninja_id, technique_id) VALUES (5,1);
+INSERT INTO TECHNIQUE_TO_NINJA (ninja_id, technique_id) VALUES (5,11);
+INSERT INTO TECHNIQUE_TO_NINJA (ninja_id, technique_id) VALUES (5,12);
+INSERT INTO TECHNIQUE_TO_NINJA (ninja_id, technique_id) VALUES (5,17);
+INSERT INTO TECHNIQUE_TO_NINJA (ninja_id, technique_id) VALUES (5,18);
+INSERT INTO TECHNIQUE_TO_NINJA (ninja_id, technique_id) VALUES (5,23);
+INSERT INTO TECHNIQUE_TO_NINJA (ninja_id, technique_id) VALUES (5,43);
+INSERT INTO TECHNIQUE_TO_NINJA (ninja_id, technique_id) VALUES (11,1);
+INSERT INTO TECHNIQUE_TO_NINJA (ninja_id, technique_id) VALUES (11,11);
+INSERT INTO TECHNIQUE_TO_NINJA (ninja_id, technique_id) VALUES (11,12);
+
+INSERT INTO TECHNIQUE_TO_NINJA (ninja_id, technique_id) VALUES (6,21);
+INSERT INTO TECHNIQUE_TO_NINJA (ninja_id, technique_id) VALUES (6,38);
+INSERT INTO TECHNIQUE_TO_NINJA (ninja_id, technique_id) VALUES (6,39);
+INSERT INTO TECHNIQUE_TO_NINJA (ninja_id, technique_id) VALUES (6,49);
+INSERT INTO TECHNIQUE_TO_NINJA (ninja_id, technique_id) VALUES (6,69);
+INSERT INTO TECHNIQUE_TO_NINJA (ninja_id, technique_id) VALUES (6,78);
+
+INSERT INTO TECHNIQUE_TO_NINJA (ninja_id, technique_id) VALUES (7,5);
+INSERT INTO TECHNIQUE_TO_NINJA (ninja_id, technique_id) VALUES (7,8);
+INSERT INTO TECHNIQUE_TO_NINJA (ninja_id, technique_id) VALUES (7,10);
+INSERT INTO TECHNIQUE_TO_NINJA (ninja_id, technique_id) VALUES (7,19);
+INSERT INTO TECHNIQUE_TO_NINJA (ninja_id, technique_id) VALUES (7,22);
+INSERT INTO TECHNIQUE_TO_NINJA (ninja_id, technique_id) VALUES (8,5);
+INSERT INTO TECHNIQUE_TO_NINJA (ninja_id, technique_id) VALUES (8,8);
+INSERT INTO TECHNIQUE_TO_NINJA (ninja_id, technique_id) VALUES (8,10);
+INSERT INTO TECHNIQUE_TO_NINJA (ninja_id, technique_id) VALUES (8,19);
+INSERT INTO TECHNIQUE_TO_NINJA (ninja_id, technique_id) VALUES (8,22);
+INSERT INTO TECHNIQUE_TO_NINJA (ninja_id, technique_id) VALUES (8,31);
+
