@@ -18,7 +18,7 @@ begin
     rank_jounin = (select ID from NINJA_RANK where NINJA_RANK.TYPE = 'Джоунин');
     rank_kage = (select ID from NINJA_RANK where NINJA_RANK.TYPE = 'Кагэ');
     if (rank_of_ninja_id = rank_jounin) then
-        update NINJA set RANK_ID = rank_kage where NINJA.ID = new.KAGE;
+        update NINJA set RANK_ID = 4 where NINJA.ID = new.KAGE;
     end if;
     if (rank_of_ninja_id <> rank_jounin) then
         raise exception 'Ninja rank is too low to become kage!';

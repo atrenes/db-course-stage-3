@@ -1,24 +1,24 @@
 --CLAN
 INSERT INTO CLAN (id, name) VALUES(0, '');
-INSERT INTO CLAN (name) VALUES('Узумаки');
-INSERT INTO CLAN (name) VALUES('Учиха');
-INSERT INTO CLAN (name) VALUES('Хатаке');
-INSERT INTO CLAN (name) VALUES('Хьюга');
-INSERT INTO CLAN (name) VALUES('Казекаги');
-INSERT INTO CLAN (name) VALUES('Намикадзэ');
-INSERT INTO CLAN (name) VALUES('Сунагакуре');
-INSERT INTO CLAN (name) VALUES('Хошигаки');
-INSERT INTO CLAN (name) VALUES('Момочи');
-INSERT INTO CLAN (name) VALUES('Куриараре');
-INSERT INTO CLAN (name) VALUES('Теруми');
-INSERT INTO CLAN (name) VALUES('Би');
+INSERT INTO CLAN (name) VALUES('Узумаки'),
+                              ('Учиха'),
+                              ('Хатаке'),
+                              ('Хьюга'),
+                              ('Казекаги'),
+                              ('Намикадзэ'),
+                              ('Сунагакуре'),
+                              ('Хошигаки'),
+                              ('Момочи'),
+                              ('Куриараре'),
+                              ('Теруми'),
+                              ('Би');
 
 --EYES
 INSERT INTO EYES (id, type) VALUES (0, '');
-INSERT INTO EYES (type) VALUES ('Обычные');
-INSERT INTO EYES (type) VALUES ('Шаринган');
-INSERT INTO EYES (type) VALUES ('Бьякуган');
-INSERT INTO EYES (type) VALUES ('Риннеган');
+INSERT INTO EYES (type) VALUES ('Обычные'),
+                               ('Шаринган'),
+                               ('Бьякуган'),
+                               ('Риннеган');
 
 --NINJA_RANK
 INSERT INTO NINJA_RANK (id, type) VALUES (0, '');
@@ -118,6 +118,7 @@ VALUES ('Темари', 0, 1, 3, 567, 0, 0, 0, 0, false, 9, 2);
 INSERT INTO NINJA (name, clan_id, eye_id, rank_id, chakra_amount, criminal_num, father_id, mother_id, criminal_group_id, is_criminal, weapon_id, village_id)
 VALUES ('Канкуро', 5, 1, 3, 789, 0, 0, 0, 0, false, 7, 2);
 
+ALTER TABLE VILLAGE ADD KAGE SERIAL REFERENCES NINJA(ID);
 
 INSERT INTO TECHNIQUE_TYPE (type) VALUES ('Ниндзюцу');
 INSERT INTO TECHNIQUE_TYPE (type) VALUES ('Гендзюцу');
@@ -465,3 +466,4 @@ INSERT INTO CRIME (date_of_crime, crime_rank_id) VALUES ('1657-05-13',3);
 INSERT INTO CRIME (date_of_crime, crime_rank_id) VALUES ('1668-09-20',3);
 INSERT INTO CRIME (date_of_crime, crime_rank_id) VALUES ('1651-09-22',2);
 INSERT INTO CRIME (date_of_crime, crime_rank_id) VALUES ('1644-06-29',2);
+
