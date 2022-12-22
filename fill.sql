@@ -70,11 +70,11 @@ INSERT INTO WEAPON (name, type_id) VALUES ('Веер', 2);
 INSERT INTO NINJA (id, name, clan_id, eye_id, rank_id, chakra_amount, criminal_num, father_id, mother_id, criminal_group_id, is_criminal, weapon_id, village_id)
 VALUES (0,'',0,0,0,0,0,0,0,0,false,0,0);
 INSERT INTO NINJA (name, clan_id, eye_id, rank_id, chakra_amount, criminal_num, father_id, mother_id, criminal_group_id, is_criminal, weapon_id, village_id)
-VALUES ('Наруто', 1, 1, 4, 1000, 0, 1, 2, 0, false, 2, 1);
-INSERT INTO NINJA (name, clan_id, eye_id, rank_id, chakra_amount, criminal_num, father_id, mother_id, criminal_group_id, is_criminal, weapon_id, village_id)
 VALUES ('Минато', 6, 1, 4, 800, 0, 0, 0, 0, false, 2, 1);
 INSERT INTO NINJA (name, clan_id, eye_id, rank_id, chakra_amount, criminal_num, father_id, mother_id, criminal_group_id, is_criminal, weapon_id, village_id)
 VALUES ('Кушина', 1, 1, 3, 700, 0, 0, 0, 0, false, 1, 1);
+INSERT INTO NINJA (name, clan_id, eye_id, rank_id, chakra_amount, criminal_num, father_id, mother_id, criminal_group_id, is_criminal, weapon_id, village_id)
+VALUES ('Наруто', 1, 1, 4, 1000, 0, 1, 2, 0, false, 2, 1);
 INSERT INTO NINJA (name, clan_id, eye_id, rank_id, chakra_amount, criminal_num, father_id, mother_id, criminal_group_id, is_criminal, weapon_id, village_id)
 VALUES ('Саске', 2, 2, 3, 950, 32, 0, 0, 1, true, 8, 1);
 INSERT INTO NINJA (name, clan_id, eye_id, rank_id, chakra_amount, criminal_num, father_id, mother_id, criminal_group_id, is_criminal, weapon_id, village_id)
@@ -115,3 +115,97 @@ INSERT INTO NINJA (name, clan_id, eye_id, rank_id, chakra_amount, criminal_num, 
 VALUES ('Сасори', 0, 1, 3, 648, 23, 0, 0, 1, true, 0, 2);
 INSERT INTO NINJA (name, clan_id, eye_id, rank_id, chakra_amount, criminal_num, father_id, mother_id, criminal_group_id, is_criminal, weapon_id, village_id)
 VALUES ('Темари', 0, 1, 3, 567, 0, 0, 0, 0, false, 9, 2);
+
+INSERT INTO TECHNIQUE_TYPE (type) VALUES ('Ниндзюцу');
+INSERT INTO TECHNIQUE_TYPE (type) VALUES ('Гендзюцу');
+INSERT INTO TECHNIQUE_TYPE (type) VALUES ('Тайдзюцу');
+INSERT INTO TECHNIQUE_TYPE (type) VALUES ('Доудзюцу');
+
+INSERT INTO TECHNIQUE (name, type_id, clan_id, description, chakra_cost) VALUES ('Высшее Чувство: Формация Воздушной Молнии Цветущей Вишни',1,2,'',280);
+INSERT INTO TECHNIQUE (name, type_id, clan_id, description, chakra_cost) VALUES ('Демоническая Иллюзия: Летающая Тень',1,6,'',473);
+INSERT INTO TECHNIQUE (name, type_id, clan_id, description, chakra_cost) VALUES ('Стихия Лавы: Пылающий Бронированный Кулак',1,5,'',424);
+INSERT INTO TECHNIQUE (name, type_id, clan_id, description, chakra_cost) VALUES ('Доки: Коготь',1,1,'',565);
+INSERT INTO TECHNIQUE (name, type_id, clan_id, description, chakra_cost) VALUES ('Аматерасу: Резкий Удар',1,4,'',195);
+INSERT INTO TECHNIQUE (name, type_id, clan_id, description, chakra_cost) VALUES ('Кипарис',1,6,'',376);
+INSERT INTO TECHNIQUE (name, type_id, clan_id, description, chakra_cost) VALUES ('Передний Лотос Любви и Молодости',1,6,'',686);
+INSERT INTO TECHNIQUE (name, type_id, clan_id, description, chakra_cost) VALUES ('Мягкий Кулак: Игла Тенкецу',1,4,'',491);
+INSERT INTO TECHNIQUE (name, type_id, clan_id, description, chakra_cost) VALUES ('Воззвание Земли',1,1,'',787);
+INSERT INTO TECHNIQUE (name, type_id, clan_id, description, chakra_cost) VALUES ('Костная Пуля',1,4,'',509);
+INSERT INTO TECHNIQUE (name, type_id, clan_id, description, chakra_cost) VALUES ('Японская Лоницера',1,2,'',495);
+INSERT INTO TECHNIQUE (name, type_id, clan_id, description, chakra_cost) VALUES ('Держись От Меня Подальше!',1,2,'',305);
+INSERT INTO TECHNIQUE (name, type_id, clan_id, description, chakra_cost) VALUES ('Стихия Ветра: Вращающийся Лист Небес',1,5,'',115);
+INSERT INTO TECHNIQUE (name, type_id, clan_id, description, chakra_cost) VALUES ('Склон Железной Горы',1,8,'',470);
+INSERT INTO TECHNIQUE (name, type_id, clan_id, description, chakra_cost) VALUES ('Танец Камелии',1,11,'',107);
+INSERT INTO TECHNIQUE (name, type_id, clan_id, description, chakra_cost) VALUES ('Волчий Клык: Двойной Удар',1,5,'',66);
+INSERT INTO TECHNIQUE (name, type_id, clan_id, description, chakra_cost) VALUES ('Восходящий Ветер Листа',1,2,'',623);
+INSERT INTO TECHNIQUE (name, type_id, clan_id, description, chakra_cost) VALUES ('Разрывной Удар Цветущей Вишни',1,2,'',69);
+INSERT INTO TECHNIQUE (name, type_id, clan_id, description, chakra_cost) VALUES ('Мощная Нога Извержения',1,4,'',401);
+INSERT INTO TECHNIQUE (name, type_id, clan_id, description, chakra_cost) VALUES ('Вечный Соперник (Ultimate Ninja 3)',1,1,'',742);
+INSERT INTO TECHNIQUE (name, type_id, clan_id, description, chakra_cost) VALUES ('Дзельква',1,3,'',139);
+INSERT INTO TECHNIQUE (name, type_id, clan_id, description, chakra_cost) VALUES ('Танец Клематиса: Цветок',1,4,'',311);
+INSERT INTO TECHNIQUE (name, type_id, clan_id, description, chakra_cost) VALUES ('Стихия Дерева: Дерево Полёта',1,2,'',469);
+INSERT INTO TECHNIQUE (name, type_id, clan_id, description, chakra_cost) VALUES ('Падение Листа',1,5,'',94);
+INSERT INTO TECHNIQUE (name, type_id, clan_id, description, chakra_cost) VALUES ('Восемь Триграмм Тридцать Две Ладони',1,8,'',637);
+INSERT INTO TECHNIQUE (name, type_id, clan_id, description, chakra_cost) VALUES ('Построение Джосэки Конохи',1,11,'',626);
+INSERT INTO TECHNIQUE (name, type_id, clan_id, description, chakra_cost) VALUES ('Яростный Несокрушимый Смерч Листа',1,1,'',258);
+INSERT INTO TECHNIQUE (name, type_id, clan_id, description, chakra_cost) VALUES ('Построение Ино-Шика-Чоу',1,7,'',533);
+INSERT INTO TECHNIQUE (name, type_id, clan_id, description, chakra_cost) VALUES ('Скрученный Цветок',1,7,'',434);
+INSERT INTO TECHNIQUE (name, type_id, clan_id, description, chakra_cost) VALUES ('Марионетка: Удар Весеннего Наказания',1,10,'',664);
+
+INSERT INTO TECHNIQUE (name, type_id, clan_id, description, chakra_cost) VALUES ('Котоамацуками',2,4,'',410);
+INSERT INTO TECHNIQUE (name, type_id, clan_id, description, chakra_cost) VALUES ('Цукуёми',2,4,'',115);
+INSERT INTO TECHNIQUE (name, type_id, clan_id, description, chakra_cost) VALUES ('Бесконечное Цукуёми',2,5,'',135);
+INSERT INTO TECHNIQUE (name, type_id, clan_id, description, chakra_cost) VALUES ('Изанаги',2,5,'',432);
+INSERT INTO TECHNIQUE (name, type_id, clan_id, description, chakra_cost) VALUES ('Изанами',2,11,'',202);
+INSERT INTO TECHNIQUE (name, type_id, clan_id, description, chakra_cost) VALUES ('Техника Пришествия Тьмы',2,8,'',514);
+INSERT INTO TECHNIQUE (name, type_id, clan_id, description, chakra_cost) VALUES ('Великая Сакура',2,8,'',132);
+INSERT INTO TECHNIQUE (name, type_id, clan_id, description, chakra_cost) VALUES ('Ива Стиля Листа',2,3,'',264);
+INSERT INTO TECHNIQUE (name, type_id, clan_id, description, chakra_cost) VALUES ('Чёрный Сон',2,3,'',499);
+INSERT INTO TECHNIQUE (name, type_id, clan_id, description, chakra_cost) VALUES ('Фантазия',2,6,'',189);
+INSERT INTO TECHNIQUE (name, type_id, clan_id, description, chakra_cost) VALUES ('Техника Слуги Тумана',2,12,'',164);
+INSERT INTO TECHNIQUE (name, type_id, clan_id, description, chakra_cost) VALUES ('Техника Пришествия Тьмы',2,12,'',735);
+INSERT INTO TECHNIQUE (name, type_id, clan_id, description, chakra_cost) VALUES ('Техника Отслеживания Чакры',2,2,'',518);
+INSERT INTO TECHNIQUE (name, type_id, clan_id, description, chakra_cost) VALUES ('Техника Обмана Разума',2,10,'',753);
+
+INSERT INTO TECHNIQUE (name, type_id, clan_id, description, chakra_cost) VALUES ('Марионетка: Танец Вишни в Цвету',3,5,'',22);
+INSERT INTO TECHNIQUE (name, type_id, clan_id, description, chakra_cost) VALUES ('Восемь Триграмм: Нарушение Вакуумной Ладони',3,6,'',596);
+INSERT INTO TECHNIQUE (name, type_id, clan_id, description, chakra_cost) VALUES ('Супер Великий Огромный Вихрь Листа',3,9,'',414);
+INSERT INTO TECHNIQUE (name, type_id, clan_id, description, chakra_cost) VALUES ('Постоянная Связь',3,1,'',606);
+INSERT INTO TECHNIQUE (name, type_id, clan_id, description, chakra_cost) VALUES ('Построение Джосэки Конохи',3,3,'',714);
+INSERT INTO TECHNIQUE (name, type_id, clan_id, description, chakra_cost) VALUES ('Динамическое Действие',3,11,'',358);
+INSERT INTO TECHNIQUE (name, type_id, clan_id, description, chakra_cost) VALUES ('Нашествие Ясности',3,7,'',704);
+INSERT INTO TECHNIQUE (name, type_id, clan_id, description, chakra_cost) VALUES ('Пухлый Мега Удар',3,8,'',56);
+INSERT INTO TECHNIQUE (name, type_id, clan_id, description, chakra_cost) VALUES ('Зеленое Влияние',3,5,'',646);
+INSERT INTO TECHNIQUE (name, type_id, clan_id, description, chakra_cost) VALUES ('Зевс',3,12,'',512);
+INSERT INTO TECHNIQUE (name, type_id, clan_id, description, chakra_cost) VALUES ('Сияющий Страусиный Пинок',3,4,'',742);
+INSERT INTO TECHNIQUE (name, type_id, clan_id, description, chakra_cost) VALUES ('Землетрясение Земли',3,4,'',284);
+INSERT INTO TECHNIQUE (name, type_id, clan_id, description, chakra_cost) VALUES ('Лунный Свет',3,10,'',356);
+INSERT INTO TECHNIQUE (name, type_id, clan_id, description, chakra_cost) VALUES ('Землетрясение Земли',3,12,'',495);
+INSERT INTO TECHNIQUE (name, type_id, clan_id, description, chakra_cost) VALUES ('Бог-Дракон Листа',3,7,'',178);
+INSERT INTO TECHNIQUE (name, type_id, clan_id, description, chakra_cost) VALUES ('Стихия Ветра: Вращающийся Лист Небес',3,12,'',367);
+INSERT INTO TECHNIQUE (name, type_id, clan_id, description, chakra_cost) VALUES ('Скрученный Цветок',3,5,'',690);
+INSERT INTO TECHNIQUE (name, type_id, clan_id, description, chakra_cost) VALUES ('Защитные Восемь Триграмм Шестьдесят Четыре Ладони',3,12,'',273);
+INSERT INTO TECHNIQUE (name, type_id, clan_id, description, chakra_cost) VALUES ('Внутренняя Сакура',3,4,'',217);
+INSERT INTO TECHNIQUE (name, type_id, clan_id, description, chakra_cost) VALUES ('Кулаки Львов-Близнецов Мягкой Поступи',3,7,'',457);
+
+INSERT INTO TECHNIQUE (name, type_id, clan_id, description, chakra_cost) VALUES ('Вакуумная Атака Восьмидесяти Богов',4,5,'',419);
+INSERT INTO TECHNIQUE (name, type_id, clan_id, description, chakra_cost) VALUES ('Заряд! Отряд Конохамару',4,7,'',650);
+INSERT INTO TECHNIQUE (name, type_id, clan_id, description, chakra_cost) VALUES ('Стихия Земли: Техника Каменного Кулака',4,2,'',56);
+INSERT INTO TECHNIQUE (name, type_id, clan_id, description, chakra_cost) VALUES ('Паровой Рывок',4,7,'',165);
+INSERT INTO TECHNIQUE (name, type_id, clan_id, description, chakra_cost) VALUES ('Пронзительные Горящие Эмоции',4,3,'',699);
+INSERT INTO TECHNIQUE (name, type_id, clan_id, description, chakra_cost) VALUES ('Аркан Хвостатого Зверя',4,9,'',676);
+INSERT INTO TECHNIQUE (name, type_id, clan_id, description, chakra_cost) VALUES ('Проклятая Печать: Убийственный Крик',4,9,'',83);
+INSERT INTO TECHNIQUE (name, type_id, clan_id, description, chakra_cost) VALUES ('Разрез Ёсаку',4,6,'',534);
+INSERT INTO TECHNIQUE (name, type_id, clan_id, description, chakra_cost) VALUES ('Вихрь Листа',4,4,'',717);
+INSERT INTO TECHNIQUE (name, type_id, clan_id, description, chakra_cost) VALUES ('Белая Дымка Небесного Танца',4,5,'',276);
+INSERT INTO TECHNIQUE (name, type_id, clan_id, description, chakra_cost) VALUES ('Великий Заграждающий Удар',4,11,'',378);
+INSERT INTO TECHNIQUE (name, type_id, clan_id, description, chakra_cost) VALUES ('Вспышка Вращающейся Ноги',4,10,'',467);
+INSERT INTO TECHNIQUE (name, type_id, clan_id, description, chakra_cost) VALUES ('Великая Комбинация Ладоней Хьюга',4,1,'',342);
+INSERT INTO TECHNIQUE (name, type_id, clan_id, description, chakra_cost) VALUES ('Небесная Защитная Нога',4,3,'',432);
+INSERT INTO TECHNIQUE (name, type_id, clan_id, description, chakra_cost) VALUES ('Удерживание Воды',4,2,'',708);
+INSERT INTO TECHNIQUE (name, type_id, clan_id, description, chakra_cost) VALUES ('Танец Ивы',4,12,'',538);
+INSERT INTO TECHNIQUE (name, type_id, clan_id, description, chakra_cost) VALUES ('Восемь Триграмм Вакуумная Ладонь',4,10,'',217);
+INSERT INTO TECHNIQUE (name, type_id, clan_id, description, chakra_cost) VALUES ('Комбо Наруто по Области',4,1,'',175);
+INSERT INTO TECHNIQUE (name, type_id, clan_id, description, chakra_cost) VALUES ('Алое Приглашение',4,2,'',260);
+INSERT INTO TECHNIQUE (name, type_id, clan_id, description, chakra_cost) VALUES ('Небесный Двойной Клык',4,8,'',557);
+
